@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./hellomvc/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/hellomvc:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/filebrowser:latest
