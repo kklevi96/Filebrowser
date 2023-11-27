@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Image Gallery";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card-deck">
+    @foreach (var imageFile in ViewBag.ImageFiles)
+    {
+        var fileNameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(imageFile);
+
+        <div class="card">
+            <img src="~/@imageFile" class="card-img-top" alt="Image">
+            <div class="card-body">
+                <h5 class="card-title">@fileNameWithoutExtension</h5>
+            </div>
+        </div>
+    }
+</div>
