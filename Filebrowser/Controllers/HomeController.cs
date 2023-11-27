@@ -15,7 +15,7 @@ namespace Filebrowser.Controllers
 
         public IActionResult Index()
         {
-            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images");
 
             var imageFiles = Directory.GetFiles(imagePath, "*.jpg").Select(Path.GetFileName);
 
